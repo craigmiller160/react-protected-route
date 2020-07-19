@@ -2,5 +2,9 @@
   "name": "react-protected-route",
   "version": "1.0.0-beta",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
 }
