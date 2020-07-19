@@ -50,10 +50,6 @@ const ProtectedRoute = <T extends object, R extends object>(props: Props<T, R>) 
     );
 };
 ProtectedRoute.propTypes = {
-    // rules: PropTypes.arrayOf(PropTypes.objectOf({
-    //     allow: PropTypes.func,
-    //     redirect: PropTypes.string
-    // }))
     rules: PropTypes.array,
     path: PropTypes.string.isRequired,
     componentProps: PropTypes.object,
