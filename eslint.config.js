@@ -14,7 +14,9 @@ const config = {
         'react/jsx-curly-spacing': ['error', { when: 'always' }],
         'react/jsx-props-no-spreading': 0,
         'comma-dangle': ['error', 'never'],
-        'react/forbid-prop-types': 0
+        'react/forbid-prop-types': 0,
+        'react/jsx-indent': 0,
+        'react/jsx-indent-props': 0
     }
 };
 
