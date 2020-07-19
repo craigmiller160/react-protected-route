@@ -1377,6 +1377,15 @@ eslint-config-airbnb-base@^14.2.0:
     object.assign "^4.1.0"
     object.entries "^1.1.2"
 
+eslint-config-airbnb-typescript@^9.0.0:
+  version "9.0.0"
+  resolved "http://localhost:30000/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-9.0.0.tgz#2524f3fa6fceb3df4ae191d1e1114a04fe54c6e6"
+  integrity sha512-BxckAZU4rwfOidZVucAO120fTSGQAugimS8HFp7OoiordpyNkq5bxSlTPZ2XxSY8Q2NWDIygqtJKqupZld/TXA==
+  dependencies:
+    "@typescript-eslint/parser" "^3.6.1"
+    eslint-config-airbnb "^18.2.0"
+    eslint-config-airbnb-base "^14.2.0"
+
 eslint-config-airbnb@^18.2.0:
   version "18.2.0"
   resolved "http://localhost:30000/eslint-config-airbnb/-/eslint-config-airbnb-18.2.0.tgz#8a82168713effce8fc08e10896a63f1235499dcd"
