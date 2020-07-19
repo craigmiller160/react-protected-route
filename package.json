@@ -1,9 +1,11 @@
 {
   "name": "react-protected-route",
   "version": "1.0.0-beta",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "eslint": "eslint -c eslint.config.js src/*"
   },
   "dependencies": {
