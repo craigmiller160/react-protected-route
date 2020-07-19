@@ -50,16 +50,19 @@ const doMount = (props: MountProps) => {
 };
 
 describe('ProtectedRoute', () => {
-    it('runs', () => {
-        console.log('Hello');
-        const component = doMount({
-            component: Comp,
-            path: '/hello'
-        });
-        console.log(component.debug()); // TODO delete this
+    it('renders component when route doesn\'t match', () => {
+        throw new Error();
     });
 
-    it('renders component with no rules', () => {
+    it('renders component with no rules when route does match', () => {
+        const component = doMount({
+            component: Comp,
+            path: '/hello',
+            initialEntries: ['/hello']
+        });
+        console.log(component.debug()); // TODO delete this
+        expect(component.find('ProtectedRoute')).toHaveLength(1);
+        expect(component.find('Route')).toHaveLength(1);
         throw new Error();
     });
 

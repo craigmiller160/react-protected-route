@@ -30,7 +30,7 @@ const ProtectedRoute = <CompProps extends object, RuleProps extends object>(prop
 
     const failedRule = rules?.find((rule: Rule<RuleProps>) => !rule.allow(ruleProps));
     if (failedRule) {
-        return <Redirect to={ failedRule.redirect } />;
+        return <Redirect to={ failedRule.redirect } />; // TODO have this replace the component
     }
 
     const Component = component;
