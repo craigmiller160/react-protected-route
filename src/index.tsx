@@ -6,7 +6,7 @@ export interface Rule<R extends object> {
     redirect: string;
 }
 
-interface Props<T extends object,R extends object> {
+interface Props<T extends object, R extends object> {
     rules?: Array<Rule<R>>;
     path: string;
     componentProps?: T;
@@ -16,7 +16,7 @@ interface Props<T extends object,R extends object> {
     routeKey?: string;
 }
 
-const ProtectedRoute = <T extends object,R extends object>(props: Props<T,R>) => {
+const ProtectedRoute = <T extends object, R extends object>(props: Props<T, R>) => {
     const failedRule = props.rules?.find((rule: Rule<R>) => !rule.allow(props.ruleProps));
     if (failedRule) {
         return <Redirect to={ failedRule.redirect } />;

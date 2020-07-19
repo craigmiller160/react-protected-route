@@ -8,6 +8,11 @@ const config = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         project: './tsconfig.json'
+    },
+    rules: {
+        '@typescript-eslint/indent': 0,
+        'react/jsx-curly-spacing': ['error', { when: 'always' }],
+        'react/jsx-props-no-spreading': 0
     }
 };
 
