@@ -6,6 +6,8 @@ export interface Rule<R extends object> {
     redirect: string;
 }
 
+// TODO don't forget to set module to commonjs once this works
+
 interface Props<T extends object,R extends object> {
     rules?: Array<Rule<R>>;
     path: string;
