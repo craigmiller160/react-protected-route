@@ -12,7 +12,8 @@ const config = {
     rules: {
         '@typescript-eslint/indent': 0,
         'react/jsx-curly-spacing': ['error', { when: 'always' }],
-        'react/jsx-props-no-spreading': 0
+        'react/jsx-props-no-spreading': 0,
+        'comma-dangle': ['error', 'never']
     }
 };
 

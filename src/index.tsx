@@ -17,18 +17,27 @@ interface Props<T extends object, R extends object> {
 }
 
 const ProtectedRoute = <T extends object, R extends object>(props: Props<T, R>) => {
-    const failedRule = props.rules?.find((rule: Rule<R>) => !rule.allow(props.ruleProps));
+    const {
+        rules,
+        ruleProps,
+        component,
+        path,
+        exact,
+        routeKey
+    } = props;
+
+    const failedRule = rules?.find((rule: Rule<R>) => !rule.allow(ruleProps));
     if (failedRule) {
         return <Redirect to={ failedRule.redirect } />;
     }
 
-    const Component = props.component;
+    const Component = component;
 
     return (
         <Route
-            path={ props.path }
-            exact={ props.exact }
-            key={ props.routeKey }
+            path={ path }
+            exact={ exact }
+            key={ routeKey }
             render={ (routeProps) => (
                 <Component
                     { ...routeProps }
@@ -38,5 +47,6 @@ const ProtectedRoute = <T extends object, R extends object>(props: Props<T, R>) 
         />
     );
 };
+// TODO add prop-types for non-ts libs
 
 export default ProtectedRoute;
