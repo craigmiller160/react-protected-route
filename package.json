@@ -1,5 +1,5 @@
 {
-  "name": "react-protected-route",
+  "name": "@craigmiller160/react-protected-route",
   "version": "1.0.0-beta",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
