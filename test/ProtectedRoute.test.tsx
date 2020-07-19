@@ -1,14 +1,24 @@
 import React from 'react';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import ProtectedRoute from '../src';
 
-interface Spec {
-    name: string;
-}
+// TODO move all dependencies to dev and make them peer dependencies
+
+configure({ adapter: new Adapter() });
+
+const Comp = () => (
+    <h1>Hello World</h1>
+);
 
 describe('First test', () => {
     it('runs', () => {
-        const spec: Spec = {
-            name: 'foo'
-        };
-        console.log(spec);
+        const component = mount(
+            <ProtectedRoute
+                component={ Comp }
+                path="/hello"
+            />
+        );
+        console.log(component.debug());
     });
 });
