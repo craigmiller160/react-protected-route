@@ -2,22 +2,22 @@ import React, { ComponentType, ElementType } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router-dom';
 
-export interface Rule<R extends object> {
-    allow: (ruleProps?: R) => boolean;
+export interface Rule<RuleProps extends object> {
+    allow: (ruleProps?: RuleProps) => boolean;
     redirect: string;
 }
 
-interface Props<T extends object, R extends object> {
-    rules?: Array<Rule<R>>;
+interface Props<CompProps extends object, RuleProps extends object> {
+    rules?: Array<Rule<RuleProps>>;
     path: string;
-    componentProps?: T;
-    ruleProps?: R;
+    componentProps?: CompProps;
+    ruleProps?: RuleProps;
     component: ElementType | ComponentType;
     exact?: boolean;
     routeKey?: string;
 }
 
-const ProtectedRoute = <T extends object, R extends object>(props: Props<T, R>) => {
+const ProtectedRoute = <CompProps extends object, RuleProps extends object>(props: Props<CompProps, RuleProps>) => {
     const {
         rules,
         ruleProps,

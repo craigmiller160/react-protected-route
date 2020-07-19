@@ -44,5 +44,9 @@ describe('ProtectedRoute', () => {
             component: Comp,
             path: '/hello'
         });
-    })
+    });
+
+    it('renders component with no rules', () => {
+
+    });
 });
