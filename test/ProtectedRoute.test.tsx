@@ -59,6 +59,17 @@ const testRoute = (component: ReactWrapper, props: MountProps) => {
     }));
 };
 
+const testComp = (component: ReactWrapper) => {
+    const comp = component.find('Comp');
+    expect(comp).toHaveLength(1);
+    expect(comp.props()).toEqual({
+        history: expect.any(Object),
+        location: expect.any(Object),
+        match: expect.any(Object),
+        text: 'Hello World'
+    });
+};
+
 describe('ProtectedRoute', () => {
     it('renders component when route doesn\'t match', () => {
         const props: MountProps = {
@@ -68,25 +79,26 @@ describe('ProtectedRoute', () => {
         const component = doMount(props);
         expect(component.find('ProtectedRoute')).toHaveLength(1);
         testRoute(component, props);
+        expect(component.find('Comp')).toHaveLength(0);
     });
 
     it('renders component with no rules when route does match', () => {
-        const component = doMount({
+        const props: MountProps = {
             component: Comp,
             path: '/hello',
             initialEntries: ['/hello']
-        });
-        console.log(component.debug()); // TODO delete this
+        };
+        const component = doMount(props);
         expect(component.find('ProtectedRoute')).toHaveLength(1);
-        expect(component.find('Route')).toHaveLength(1);
+        testRoute(component, props);
+        testComp(component);
+    });
+
+    it('renders component matching route with successful rule', () => {
         throw new Error();
     });
 
-    it('renders component with successful rule', () => {
-        throw new Error();
-    });
-
-    it('renders component with failed rule', () => {
+    it('renders component matching route with failed rule', () => {
         throw new Error();
     });
 });
