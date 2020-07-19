@@ -1,22 +1,33 @@
 import React, { ElementType } from 'react';
 import { mount, configure, ReactWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import ProtectedRoute from '../src';
+import ProtectedRoute, { Rule } from '../src';
 import { MemoryRouter } from 'react-router';
 
 // TODO move all dependencies to dev and make them peer dependencies
 
 configure({ adapter: new Adapter() });
 
+interface RuleProps {
+    allow: boolean;
+}
+
 interface MountProps {
     initialEntries?: Array<string>;
     path: string;
     component: ElementType;
+    ruleProps?: RuleProps;
+    rules?: Array<Rule<RuleProps>>;
 }
 
 interface CompProps {
     text: string;
 }
+
+const rule: Rule<RuleProps> = {
+    allow: (ruleProps?: RuleProps) => ruleProps?.allow ?? false,
+    redirect: '/'
+};
 
 const Comp = (props: CompProps) => {
     const {
@@ -25,13 +36,15 @@ const Comp = (props: CompProps) => {
     return (
         <h1>{ text }</h1>
     );
-}
+};
 
 const doMount = (props: MountProps) => {
     const {
         initialEntries,
         path,
-        component
+        component,
+        ruleProps,
+        rules
     } = props;
 
     const Component = component;
@@ -44,6 +57,8 @@ const doMount = (props: MountProps) => {
                 componentProps={ {
                     text: 'Hello World'
                 } }
+                ruleProps={ ruleProps }
+                rules={ rules }
             />
         </MemoryRouter>
     );
@@ -68,6 +83,12 @@ const testComp = (component: ReactWrapper) => {
         match: expect.any(Object),
         text: 'Hello World'
     });
+};
+
+const testRedirect = (component: ReactWrapper) => {
+    const redirect = component.find('Redirect');
+    expect(redirect).toHaveLength(1);
+    expect(redirect.props().to).toEqual('/');
 };
 
 describe('ProtectedRoute', () => {
@@ -95,10 +116,35 @@ describe('ProtectedRoute', () => {
     });
 
     it('renders component matching route with successful rule', () => {
-        throw new Error();
+        const props: MountProps = {
+            component: Comp,
+            path: '/hello',
+            ruleProps: {
+                allow: true
+            },
+            rules: [ rule ],
+            initialEntries: ['/hello']
+        };
+        const component = doMount(props);
+        expect(component.find('ProtectedRoute')).toHaveLength(1);
+        testRoute(component, props);
+        testComp(component);
     });
 
     it('renders component matching route with failed rule', () => {
-        throw new Error();
+        const props: MountProps = {
+            component: Comp,
+            path: '/hello',
+            ruleProps: {
+                allow: false
+            },
+            rules: [ rule ],
+            initialEntries: ['/hello']
+        };
+        const component = doMount(props);
+        expect(component.find('ProtectedRoute')).toHaveLength(1);
+        expect(component.find('Route')).toHaveLength(0);
+        expect(component.find('Comp')).toHaveLength(0);
+        testRedirect(component);
     });
 });
