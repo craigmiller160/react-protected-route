@@ -2,6 +2,7 @@ import React from 'react';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ProtectedRoute from '../src';
+import { MemoryRouter } from 'react-router';
 
 // TODO move all dependencies to dev and make them peer dependencies
 
@@ -14,10 +15,12 @@ const Comp = () => (
 describe('First test', () => {
     it('runs', () => {
         const component = mount(
-            <ProtectedRoute
-                component={ Comp }
-                path="/hello"
-            />
+            <MemoryRouter initialEntries={ ['/'] }>
+                <ProtectedRoute
+                    component={ Comp }
+                    path="/hello"
+                />
+            </MemoryRouter>
         );
         console.log(component.debug());
     });
