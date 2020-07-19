@@ -14,9 +14,18 @@ interface MountProps {
     component: ElementType;
 }
 
-const Comp = () => (
-    <h1>Hello World</h1>
-);
+interface CompProps {
+    text: string;
+}
+
+const Comp = (props: CompProps) => {
+    const {
+        text
+    } = props;
+    return (
+        <h1>{ text }</h1>
+    );
+}
 
 const doMount = (props: MountProps) => {
     const {
@@ -32,6 +41,9 @@ const doMount = (props: MountProps) => {
             <ProtectedRoute
                 component={ Component }
                 path={ path }
+                componentProps={ {
+                    text: 'Hello World'
+                } }
             />
         </MemoryRouter>
     );
@@ -40,13 +52,22 @@ const doMount = (props: MountProps) => {
 describe('ProtectedRoute', () => {
     it('runs', () => {
         console.log('Hello');
-        doMount({
+        const component = doMount({
             component: Comp,
             path: '/hello'
         });
+        console.log(component.debug()); // TODO delete this
     });
 
     it('renders component with no rules', () => {
+        throw new Error();
+    });
 
+    it('renders component with successful rule', () => {
+        throw new Error();
+    });
+
+    it('renders component with failed rule', () => {
+        throw new Error();
     });
 });

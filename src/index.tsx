@@ -28,7 +28,7 @@ const ProtectedRoute = <CompProps extends object, RuleProps extends object>(prop
         componentProps
     } = props;
 
-    const failedRule = rules?.find((rule: Rule<R>) => !rule.allow(ruleProps));
+    const failedRule = rules?.find((rule: Rule<RuleProps>) => !rule.allow(ruleProps));
     if (failedRule) {
         return <Redirect to={ failedRule.redirect } />;
     }
