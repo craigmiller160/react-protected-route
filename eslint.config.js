@@ -1,11 +1,12 @@
 const config = {
     extends: [
-        'airbnb'
+        'airbnb',
+        'plugin:@typescript-eslint/recommended'
     ],
     plugins: [
         'react-hooks'
     ],
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
 };
 
 module.exports = config;
