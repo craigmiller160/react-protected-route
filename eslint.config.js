@@ -16,7 +16,8 @@ const config = {
         'comma-dangle': ['error', 'never'],
         'react/forbid-prop-types': 0,
         'react/jsx-indent': 0,
-        'react/jsx-indent-props': 0
+        'react/jsx-indent-props': 0,
+        'max-len': ['error', 120]
     }
 };
 
