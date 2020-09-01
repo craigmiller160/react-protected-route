@@ -1,5 +1,5 @@
 import React, { ComponentType, ElementType } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router-dom';
 
 export interface Rule<RuleProps extends object> {
@@ -49,18 +49,18 @@ const ProtectedRoute = <CompProps extends object, RuleProps extends object>(prop
         />
     );
 };
-// ProtectedRoute.propTypes = {
-//     rules: PropTypes.arrayOf(PropTypes.shape({
-//         allow: PropTypes.func.isRequired,
-//         redirect: PropTypes.string.isRequired
-//     })),
-//     path: PropTypes.string.isRequired,
-//     componentProps: PropTypes.object,
-//     ruleProps: PropTypes.object,
-//     component: PropTypes.elementType.isRequired,
-//     exact: PropTypes.bool,
-//     routeKey: PropTypes.string,
-// };
+ProtectedRoute.propTypes = {
+    rules: PropTypes.arrayOf(PropTypes.shape({
+        allow: PropTypes.func.isRequired,
+        redirect: PropTypes.string.isRequired
+    })),
+    path: PropTypes.string.isRequired,
+    componentProps: PropTypes.object,
+    ruleProps: PropTypes.object,
+    component: PropTypes.elementType.isRequired,
+    exact: PropTypes.bool,
+    routeKey: PropTypes.string,
+};
 ProtectedRoute.defaultProps = {
     rules: [],
     componentProps: {},
