@@ -1,6 +1,6 @@
 {
   "name": "@craigmiller160/react-protected-route",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
@@ -17,10 +17,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "typescript": "^3.9.7"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "typescript": "^3.9.7",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.5",
