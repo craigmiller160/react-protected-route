@@ -1,6 +1,7 @@
 {
   "name": "@craigmiller160/react-protected-route",
   "version": "1.2.0-beta",
+  "author": "craigmiller160",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
