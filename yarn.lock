@@ -286,6 +286,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@craigmiller160/eslint-config-cra-extension@^1.0.0":
+  version "1.0.0"
+  resolved "http://localhost:30000/@craigmiller160%2feslint-config-cra-extension/-/eslint-config-cra-extension-1.0.0.tgz#6084bd7f392d561831ac9c41eecb059e7ad96bd4"
+  integrity sha512-3sgvgt9W2c3I6EcKupTVkFOaApvc6kMEJpdN12zWEY+n+nSOBpK3rTf8n3+pbVBOAzUxEOII7lUeoXExUlKLDQ==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "http://localhost:30000/@istanbuljs%2fload-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -1756,6 +1761,13 @@ eslint-config-airbnb@^18.2.0:
     object.assign "^4.1.0"
     object.entries "^1.1.2"
 
+eslint-config-react-app@^5.2.1:
+  version "5.2.1"
+  resolved "http://localhost:30000/eslint-config-react-app/-/eslint-config-react-app-5.2.1.tgz#698bf7aeee27f0cea0139eaef261c7bf7dd623df"
+  integrity sha512-pGIZ8t0mFLcV+6ZirRgYK6RVqUIKRIi9MmgzUEmrIknsn3AdO0I32asO86dJgloHq+9ZPl8UIg8mYrvgP5u2wQ==
+  dependencies:
+    confusing-browser-globals "^1.0.9"
+
 eslint-import-resolver-node@^0.3.3:
   version "0.3.4"
   resolved "http://localhost:30000/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.4.tgz#85ffa81942c25012d8231096ddf679c03042c717"
@@ -1771,6 +1783,14 @@ eslint-module-utils@^2.6.0:
   dependencies:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
+
+eslint-plugin-flowtype@^5.2.0:
+  version "5.2.0"
+  resolved "http://localhost:30000/eslint-plugin-flowtype/-/eslint-plugin-flowtype-5.2.0.tgz#a4bef5dc18f9b2bdb41569a4ab05d73805a3d261"
+  integrity sha512-z7ULdTxuhlRJcEe1MVljePXricuPOrsWfScRXFhNzVD5dmTHWjIF57AxD0e7AbEoLSbjSsaA5S+hCg43WvpXJQ==
+  dependencies:
+    lodash "^4.17.15"
+    string-natural-compare "^3.0.1"
 
 eslint-plugin-import@^2.22.0:
   version "2.22.0"
@@ -4558,6 +4578,11 @@ string-length@^4.0.1:
   dependencies:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
+
+string-natural-compare@^3.0.1:
+  version "3.0.1"
+  resolved "http://localhost:30000/string-natural-compare/-/string-natural-compare-3.0.1.tgz#7a42d58474454963759e8e8b7ae63d71c1e7fdf4"
+  integrity sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw==
 
 string-width@^3.0.0:
   version "3.1.0"
