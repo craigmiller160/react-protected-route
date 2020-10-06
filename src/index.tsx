@@ -17,7 +17,7 @@
  */
 
 import React, { ComponentType, ElementType } from 'react';
-import PropTypes, {Requireable} from 'prop-types';
+import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router-dom';
 
 export interface Rule<RuleProps extends object> {
