@@ -21,7 +21,6 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@craigmiller160/eslint-config-cra-extension": "^1.0.0",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.5",
