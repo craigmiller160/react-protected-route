@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "license": "MIT",
   "files": [
-    "lib"
+    "lib",
+    ".yalc"
   ],
   "scripts": {
     "build": "web-config-scripts buildTSLib",
