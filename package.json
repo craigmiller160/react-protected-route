@@ -14,6 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@craigmiller160/web-config": "file:.yalc/@craigmiller160/web-config",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
