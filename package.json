@@ -9,9 +9,10 @@
     "lib"
   ],
   "scripts": {
-    "build": "node scripts/clean.js && tsc",
-    "lint": "eslint -c eslint.config.js src/*",
-    "test": "jest"
+    "build": "web-config-scripts buildTSLib",
+    "lint": "web-config-scripts lint",
+    "test": "web-config-scripts test",
+    "validate": "web-config-scripts validate"
   },
   "resolutions": {
     "es-abstract": "^1.18.0-next.1"
