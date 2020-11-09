@@ -29,6 +29,7 @@
   "devDependencies": {
     "@craigmiller160/web-config": "file:.yalc/@craigmiller160/web-config",
     "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.5"
   }
 }
