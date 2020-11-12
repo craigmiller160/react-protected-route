@@ -17,14 +17,9 @@
  */
 
 import React, { ElementType } from 'react';
-import { mount, configure, ReactWrapper } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import ProtectedRoute, { Rule } from '../src';
+import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-
-// TODO move all dependencies to dev and make them peer dependencies
-
-configure({ adapter: new Adapter() });
+import ProtectedRoute, { Rule } from '../src';
 
 interface RuleProps {
     allow: boolean;
@@ -68,7 +63,7 @@ const doMount = (props: MountProps) => {
     const Component = component;
 
     return mount(
-        <MemoryRouter initialEntries={ initialEntries ?? ['/'] }>
+        <MemoryRouter initialEntries={ initialEntries ?? [ '/' ] }>
             <ProtectedRoute
                 component={ Component }
                 path={ path }
@@ -125,7 +120,7 @@ describe('ProtectedRoute', () => {
         const props: MountProps = {
             component: Comp,
             path: '/hello',
-            initialEntries: ['/hello']
+            initialEntries: [ '/hello' ]
         };
         const component = doMount(props);
         expect(component.find('ProtectedRoute')).toHaveLength(1);
@@ -141,7 +136,7 @@ describe('ProtectedRoute', () => {
                 allow: true
             },
             rules: [ rule ],
-            initialEntries: ['/hello']
+            initialEntries: [ '/hello' ]
         };
         const component = doMount(props);
         expect(component.find('ProtectedRoute')).toHaveLength(1);
@@ -157,7 +152,7 @@ describe('ProtectedRoute', () => {
                 allow: false
             },
             rules: [ rule ],
-            initialEntries: ['/hello']
+            initialEntries: [ '/hello' ]
         };
         const component = doMount(props);
         expect(component.find('ProtectedRoute')).toHaveLength(1);
