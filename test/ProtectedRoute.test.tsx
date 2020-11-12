@@ -22,8 +22,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import { MemoryRouter } from 'react-router';
 import ProtectedRoute, { Rule } from '../src';
 
-// TODO move all dependencies to dev and make them peer dependencies
-
 configure({ adapter: new Adapter() });
 
 interface RuleProps {

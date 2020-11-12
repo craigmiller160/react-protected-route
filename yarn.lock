@@ -954,10 +954,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@craigmiller160/web-config@^2.0.1":
-  version "2.0.1"
-  resolved "http://localhost:30000/@craigmiller160%2fweb-config/-/web-config-2.0.1.tgz#46bb4048735919ed4b1125c98dcf993dcf29df1f"
-  integrity sha512-pUUsXcBAXaTDCFGD+k6VgvwH812E4RcGKN5/MbTVRJJzw3EFzi2ZMmv5M+uQR8Mzl38QV9JZkRC7IP/NdHvwhw==
+"@craigmiller160/web-config@^2.0.2":
+  version "2.0.2"
+  resolved "http://localhost:30000/@craigmiller160%2fweb-config/-/web-config-2.0.2.tgz#12c5e7a240eb703fe4d1373764b6b45601df6508"
+  integrity sha512-8neuqJ16JyD09DDMKERmYI9CVqDX31MTJJJxdtjNQvz4zi+4uMUy8SyJGAclJ1gNgVh3Iiz4OkXIQG26uMkHIw==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-transform-runtime" "^7.12.1"
