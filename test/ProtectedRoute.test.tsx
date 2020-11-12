@@ -17,12 +17,9 @@
  */
 
 import React, { ElementType } from 'react';
-import { mount, configure, ReactWrapper } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount, ReactWrapper } from 'enzyme';
 import { MemoryRouter } from 'react-router';
 import ProtectedRoute, { Rule } from '../src';
-
-configure({ adapter: new Adapter() });
 
 interface RuleProps {
     allow: boolean;
