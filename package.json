@@ -11,7 +11,8 @@
     ".yalc"
   ],
   "scripts": {
-    "build": "web-config-scripts buildTSLib",
+    "build": "web-config-scripts lint && web-config-scripts test && web-config-scripts buildTSLib",
+    "forceBuild": "web-config-scripts buildTSLib",
     "lint": "web-config-scripts lint",
     "test": "web-config-scripts test",
     "validate": "web-config-scripts validate"
