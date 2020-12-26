@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "declaration": true,
+    "module": "es2015",
+    "outDir": "/home/craig/Development/Libraries/react-protected-route/lib"
+  },
+  "include": [
+    "/home/craig/Development/Libraries/react-protected-route/src/**/*"
+  ],
+  "exclude": [
+    "/home/craig/Development/Libraries/react-protected-route/node_modules",
+    "/home/craig/Development/Libraries/react-protected-route/lib",
+    "/home/craig/Development/Libraries/react-protected-route/build",
+    "/home/craig/Development/Libraries/react-protected-route/.yalc"
+  ]
+}
