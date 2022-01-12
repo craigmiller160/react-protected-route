@@ -1,6 +1,6 @@
 {
   "name": "@craigmiller160/react-protected-route",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "publishConfig": {
     "registry": "https://craigmiller160.ddns.net:30003/repository/npm-private/"
   },
@@ -23,10 +23,9 @@
   "resolutions": {
     "es-abstract": "^1.18.0-next.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
@@ -34,6 +33,11 @@
     "@craigmiller160/react-web-config": "^2.8.2",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.9",
-    "@types/react-router-dom": "^5.1.5"
+    "@types/react-router-dom": "^5.3.2",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }
