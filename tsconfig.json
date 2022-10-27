@@ -21,13 +21,13 @@
     "module": "es2015"
   },
   "include": [
-    "/home/craig/Development/Libraries/react-protected-route/src/**/*",
-    "/home/craig/Development/Libraries/react-protected-route/test/**/*"
+    "/Users/craigmiller/Development/Libraries/react-protected-route/src/**/*",
+    "/Users/craigmiller/Development/Libraries/react-protected-route/test/**/*"
   ],
   "exclude": [
-    "/home/craig/Development/Libraries/react-protected-route/node_modules",
-    "/home/craig/Development/Libraries/react-protected-route/lib",
-    "/home/craig/Development/Libraries/react-protected-route/build",
-    "/home/craig/Development/Libraries/react-protected-route/.yalc"
+    "/Users/craigmiller/Development/Libraries/react-protected-route/node_modules",
+    "/Users/craigmiller/Development/Libraries/react-protected-route/lib",
+    "/Users/craigmiller/Development/Libraries/react-protected-route/build",
+    "/Users/craigmiller/Development/Libraries/react-protected-route/.yalc"
   ]
 }

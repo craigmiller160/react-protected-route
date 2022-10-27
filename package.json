@@ -1,8 +1,8 @@
 {
   "name": "@craigmiller160/react-protected-route",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "publishConfig": {
-    "registry": "https://craigmiller160.ddns.net:30003/repository/npm-private/"
+    "registry": "https://nexus-craigmiller160.ddns.net/repository/npm-private/"
   },
   "sideEffects": false,
   "author": "craigmiller160",
@@ -14,7 +14,7 @@
     ".yalc"
   ],
   "scripts": {
-    "build": "web-config-scripts lint && web-config-scripts test && web-config-scripts buildTSLib",
+    "build": "web-config-scripts buildTSLib",
     "forceBuild": "web-config-scripts buildTSLib",
     "lint": "web-config-scripts lint",
     "test": "web-config-scripts test",
@@ -30,7 +30,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@craigmiller160/react-web-config": "^2.8.2",
+    "@craigmiller160/react-web-config": "^2.10.1",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.3.2",
