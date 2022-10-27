@@ -59,10 +59,13 @@ const ProtectedRoute = <CompProps extends object, RuleProps extends object>(prop
             exact={ exact }
             key={ routeKey }
             render={ (routeProps) => (
-                <Component
-                    { ...routeProps }
-                    { ...componentProps }
-                />
+                <>
+                    { /* @ts-ignore */ }
+                    <Component
+                        { ...routeProps }
+                        { ...componentProps }
+                    />
+                </>
             ) }
         />
     );
